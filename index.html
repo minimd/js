@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cinema</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Rubik:ital,wght@0,300..900;1,300..900&family=Victor+Mono:wght@200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="main">
+      <div class="first flex">
+        <label for="movie-name"> choose your movie : </label>
+        <select name="movie-name" id="move-select" onchange="changed()">
+          <option value="12">joker 12$</option>
+          <option value=" 15">avengers 15$</option>
+          <option value="10">up 10$</option>
+          <option value="8">deadpool 8$</option>
+        </select>
+      </div>
+      <div class="second flex">
+        <div class="center flex">
+          <div class="divider flex">
+            <div class="seat available"></div>
+            <label for="#">available</label>
+          </div>
+          <div class="divider flex">
+            <div class="seat selected"></div>
+            <label for="#">selected</label>
+          </div>
+          <div class="divider flex">
+            <div class="seat occupied"></div>
+            <label for="#">occupied</label>
+          </div>
+        </div>
+      </div>
+      <div class="third flex">
+        <div class="screen"></div>
+      </div>
+      <div class="fourth flex">
+        <div class="container">
+          <div class="row">
+            <div class="set flex">
+              <div class="seat selected"></div>
+              <div class="seat available"></div>
+              <div class="seat occupied"></div>
+            </div>
+            <div class="set flex">
+              <div class="seat available"></div>
+              <div class="seat occupied"></div>
+              <div class="seat occupied"></div>
+              <div class="seat available"></div>
+            </div>
+            <div class="set flex">
+              <div class="seat occupied"></div>
+              <div class="seat available"></div>
+              <div class="seat available"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="set flex">
+              <div class="seat available"></div>
+              <div class="seat available"></div>
+              <div class="seat available"></div>
+            </div>
+            <div class="set flex">
+              <div class="seat available"></div>
+              <div class="seat available"></div>
+              <div class="seat available"></div>
+              <div class="seat available"></div>
+            </div>
+            <div class="set flex">
+              <div class="seat available"></div>
+              <div class="seat available"></div>
+              <div class="seat available"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="set flex">
+              <div class="seat available"></div>
+              <div class="seat available"></div>
+              <div class="seat available"></div>
+            </div>
+            <div class="set flex">
+              <div class="seat available"></div>
+              <div class="seat available"></div>
+              <div class="seat occupied"></div>
+              <div class="seat available"></div>
+            </div>
+            <div class="set flex">
+              <div class="seat occupied"></div>
+              <div class="seat occupied"></div>
+              <div class="seat available"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="set flex">
+              <div class="seat available"></div>
+              <div class="seat occupied"></div>
+              <div class="seat occupied"></div>
+            </div>
+            <div class="set flex">
+              <div class="seat available"></div>
+              <div class="seat occupied"></div>
+              <div class="seat available"></div>
+              <div class="seat available"></div>
+            </div>
+            <div class="set flex">
+              <div class="seat available"></div>
+              <div class="seat available"></div>
+              <div class="seat occupied"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="set flex">
+              <div class="seat available"></div>
+              <div class="seat occupied"></div>
+              <div class="seat available"></div>
+            </div>
+            <div class="set flex">
+              <div class="seat available"></div>
+              <div class="seat occupied"></div>
+              <div class="seat occupied"></div>
+              <div class="seat occupied"></div>
+            </div>
+            <div class="set flex">
+              <div class="seat available"></div>
+              <div class="seat available"></div>
+              <div class="seat occupied"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fifth flex">
+        <p>you have selected 0 seats for 0$</p>
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
