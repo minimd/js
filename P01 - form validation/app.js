@@ -54,8 +54,13 @@ function isValidPassword(e) {
   }
 }
 function isValidPassconf(){
-if(passconfInput.value===passwordInput.value){
-    
+if(passconfInput.value==passwordInput.value){
+    greenize(passconfInput);
+    passconfLabel.textContent = "";
+  } else {
+    redize(passconfInput);
+    passconfLabel.textContent = "passwords do not match";
+  
 }
 }
 
@@ -63,5 +68,6 @@ button.onclick = function () {
   isValidEmail(emailInput.value);
   isValidUsername(usernameInput.value);
   isValidPassword(passwordInput.value);
+  isValidPassconf();
 
 };
