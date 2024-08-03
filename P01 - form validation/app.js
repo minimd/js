@@ -50,7 +50,7 @@ function isValidPassword(e) {
     passwordLabel.textContent = "";
   } else {
     redize(passwordInput);
-    passwordLabel.textContent = "please insert a valid username";
+    passwordLabel.textContent = "please insert a valid password";
   }
 }
 function isValidPassconf(){
