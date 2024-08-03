@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form validation</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container flex-v">
+      <h2>register a new account</h2>
+      <div class="flex-v" action="#">
+        <div class="row">
+          <label for="email">email address:</label>
+          <br />
+          <input type="text" name="" id="email" /><br />
+          <p class="email-error"></p>
+        </div>
+        <div class="row">
+          <label for="username">username:</label>
+          <br />
+          <input type="text" name="" id="username" /><br />
+          <p class="username-error"></p>
+        </div>
+        <div class="row">
+          <label for="password">password:</label>
+          <br />
+          <input type="password" name="" id="password" /><br />
+          <p class="password-error"></p>
+        </div>
+        <div class="row">
+          <label for="passconf">confirm password:</label>
+          <br />
+          <input type="password" name="" id="passconf" /><br />
+          <p class="passconf-error"></p>
+        </div>
+        <button type="submit" class="submit-btn">submit</button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
