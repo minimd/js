@@ -1,0 +1,96 @@
+body{
+    background-image: url(thumb-1920-922691.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    height: auto;
+    color: aliceblue;
+    font-family: "Lato", sans-serif;
+}
+section{
+    /* background-color: antiquewhite; */
+    width: 1000px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+}
+input{
+    width: 350px;
+    height: 40px;
+    padding: 10px;
+    padding-left: 20px;
+    margin-top: 40px;
+    border-radius: 23px;
+    border:none;
+    font-size: larger;
+}
+h1{
+    margin-top: 60px;
+
+}
+.container{
+    width: auto;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+img{
+    width: 250px;
+    background-size: cover;
+    border-radius: 5%;
+    cursor: pointer;
+}
+div.unit{
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+  
+}
+#unit {
+width: 370px;
+cursor: default;
+}
+div.ingredients{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    margin-top: 30px;
+
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+div.instructions{
+    width: 80%;
+    height: auto;
+
+}
+.instructions p{
+    margin-top: 30px;
+    font-size: larger;
+}
+ul li{
+    margin-top: 10px;
+    font-size: 22px;
+}
+.hidden{
+    display: none !important;
+}
