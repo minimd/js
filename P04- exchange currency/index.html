@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>exchange currency</title>
+  </head>
+  <body>
+    <section class="container">
+      <img
+        src="https://www.logolynx.com/images/logolynx/c4/c4e297cf6b1f22c8df0e7d5ef5bf846e.png"
+        alt=""
+      />
+      <h1>welcome to the currency exchanger</h1>
+      <p class="constant">choose a currency and a value</p>
+
+      <div class="row">
+        <select name="price-main-select" id="main-select">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+          <option value="AUD">AUD</option>
+          <option value="CAD">CAD</option>
+          <option value="JPY">JPY</option>
+          <option value="CNY">CNY</option>
+        </select>
+        <input type="number" name="main-input" id="main-input">
+      </div>
+      <div class="row">
+        <button id="convert-btn">convert</button>
+        <p class="  unpadded">every 1 dollar equals 0.8 eur</p>
+      </div>
+      <div class="row">
+        <select name="price-main-select" id="sec-select">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+          <option value="AUD">AUD</option>
+          <option value="CAD">CAD</option>
+          <option value="JPY">JPY</option>
+          <option value="CNY">CNY</option>
+        </select>
+        <input type="number" name="main-input" id="sec-input">
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
