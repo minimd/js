@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>expense</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="flex">
+    <section class="main .flex">
+      <h1>expense tracker</h1>
+
+      <div class="flex row " id="row">
+        <h4>your balance</h4>
+        <h3 class="balanceNumber">$100</h3>
+      </div>
+
+      <div class="boxes backed">
+        <div class="flex box" id="income-box">
+          <h4>income</h4>
+          <h4 class="income">210</h4>
+        </div>
+        <div class="flex box" id="expense-box">
+          <h4>income</h4>
+          <h4 class="expense">300</h4>
+        </div>
+      </div>
+      <div class="flex history ">
+        <h2>history</h2>
+        <div class="card red ">
+          <p class="expenseName">Camera</p>
+          <p class="expensePrice">-100</p>
+        </div>
+        <div class="card green">
+          <p class="expenseName">Cash</p>
+          <p class="expensePrice">200</p>
+        </div>
+      </div>
+      <div class=" flex add">
+        <h4>add new transactions</h4>
+        <p>text</p>
+        <input type="text" name="" id="inputText" placeholder="Enter text" />
+        <p>Amount</p>
+        <br />
+        <p>(negative - expense, positive - income)</p>
+        <input
+          type="number"
+          name=""
+          id="inputAmount"
+          placeholder="enterAmount"
+        />
+        
+      </div>
+      <button class="flex " id="center">add amount</button>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
