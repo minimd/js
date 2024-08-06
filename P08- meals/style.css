@@ -8,6 +8,7 @@ body{
     height: auto;
     color: aliceblue;
     font-family: "Lato", sans-serif;
+    line-height: 1.2;
 }
 section{
     /* background-color: antiquewhite; */

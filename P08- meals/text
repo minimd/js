@@ -1,0 +1,13 @@
+    newImage.addEventListener("click",async function () {
+     
+        console.log(element.idMeal);
+        await fetch(
+            `www.themealdb.com/api/json/v1/1/lookup.php?i=${element.idMeal}`
+          )
+            .then((ss) => ss.json())
+            .then((item) => {
+              console.log(item);
+            });
+
+
+    });
