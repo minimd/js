@@ -68,6 +68,7 @@ h4.expense{
 div.history{
     align-items: baseline;
     gap: 12px;
+    height: auto;
 
 }
 div.card{
