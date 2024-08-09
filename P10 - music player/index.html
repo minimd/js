@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Music Player</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #player {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 600px;
+        }
+        #player h2 {
+            text-align: center;
+        }
+        #controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        #controls button {
+            margin: 0 5px;
+            padding: 10px 15px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        #progress-container {
+            margin-top: 20px;
+        }
+        #progress {
+            width: 100%;
+            -webkit-appearance: none;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            transition: opacity .2s;
+        }
+        #progress:hover {
+            opacity: 1;
+        }
+        #progress::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 15px;
+            height: 15px;
+            background: #4CAF50;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        #progress::-moz-range-thumb {
+            width: 15px;
+            height: 15px;
+            background: #4CAF50;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        #song-info {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="player">
+        <h2>Simple Music Player</h2>
+        <audio id="audio"></audio>
+        <div id="song-info">
+            <span id="current-song">No song playing</span>
+        </div>
+        <div id="progress-container">
+            <input type="range" id="progress" value="0" min="0" max="100">
+        </div>
+        <div id="controls">
+            <button onclick="prevSong()">Previous</button>
+            <button onclick="playPause()">Play/Pause</button>
+            <button onclick="nextSong()">Next</button>
+            <button onclick="changeVolume(0.1)">Volume Up</button>
+            <button onclick="changeVolume(-0.1)">Volume Down</button>
+        </div>
+    </div>
+
+    <script>
+        const audio = document.getElementById('audio');
+        const progress = document.getElementById('progress');
+        const currentSongElement = document.getElementById('current-song');
+        const songs = ['music/hey.mp3', 'music/summer.mp3', 'music/ukulele.mp3'];
+        let currentSongIndex = 0;
+
+        function loadSong(index) {
+            audio.src = songs[index];
+            currentSongElement.textContent = `Playing: ${songs[index].split('/').pop()}`;
+        }
+
+        function playPause() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        function nextSong() {
+            currentSongIndex = (currentSongIndex + 1) % songs.length;
+            loadSong(currentSongIndex);
+            audio.play();
+        }
+
+        function prevSong() {
+            currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+            loadSong(currentSongIndex);
+            audio.play();
+        }
+
+        function changeVolume(delta) {
+            audio.volume = Math.max(0, Math.min(1, audio.volume + delta));
+        }
+
+        audio.addEventListener('timeupdate', () => {
+            const percentage = (audio.currentTime / audio.duration) * 100;
+            progress.value = percentage;
+        });
+
+        progress.addEventListener('input', () => {
+            const time = (progress.value / 100) * audio.duration;
+            audio.currentTime = time;
+        });
+
+        audio.addEventListener('ended', nextSong);
+
+        loadSong(currentSongIndex);
+    </script>
+</body>
+</html>
