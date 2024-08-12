@@ -1,0 +1,22 @@
+body{
+    height: 97vh;
+    background-color: rgb(255, 255, 255);
+}
+div.circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at center center, #00000000 4%, rgba(0, 0, 0, 0.259), #00000082 );
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: left 3s ease; 
+    animation-name: motion;
+    animation-duration: 3s;
+}
+
+@keyframes motion {
+    from {left :40%}
+    to {left: 70%;}
+  }

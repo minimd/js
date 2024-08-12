@@ -3,16 +3,12 @@ let second = document.querySelector(".second");
 let container = document.querySelector("body");
 let startingTime =0;
 
-let countdown =setInterval(() => {
-    startingTime+=100;
-}, 100);
+
 let finished;
-console.log(startingTime);
 
 let script = "loading...............................................";
 
 let splitted = script.split("");
-console.log("suiiiiiii".split(""));
 
 let x = 0;
 let y = 0;
@@ -21,7 +17,6 @@ let Handsome = setInterval(() => {
   x++;
 
   main.textContent = splitted.slice(0, x).join("")+'_';
-  console.log(x);
   if (x >= splitted.length) {
     clearInterval(Handsome);
 
@@ -83,34 +78,63 @@ let sui = setTimeout(() => {
     if (y >= megaScript.length) {
       clearInterval(sui);
       
-      console.log(startingTime);
     }
   }, z);
 }, 700);
 let blueScreen= setTimeout(() => {
     main.classList.add('hidden');
     second.classList.add('hidden');
-}, 9000);
- let blueScreen2 = setTimeout(() => {
-    document.querySelector('.image').classList.add('hidden');
-}, 11000);
+}, 6000);
+
  let welcome = setTimeout(() => {
     container.style.justifyContent = 'center';
     container.style.alignItems = 'center';
+    document.querySelector('.openning').style.alignItems = 'center';
+    document.querySelector('.openning').style.justifyContent = 'center';
     document.querySelector('.welcome').classList.toggle('opac0');
-}, 12000);
+}, 8000);
 let bye = setTimeout(() => {
     document.querySelector('.welcome').classList.toggle('opac0');
 
-},15700);
+},13500);
  setTimeout(() => {
     document.querySelector('.welcome').textContent = 'enjoy';
     document.querySelector('.welcome').classList.toggle('opac0');
 
-},17400);
+},16000);
  setTimeout(() => {
     document.querySelector('.welcome').classList.toggle('opac0');
 
-},21100);
+},18500);
 
+
+setTimeout(() => {
+  document.querySelector('#circle').classList.add('circle');
+}, 7500);
+setTimeout(() => {
+  document.querySelector('#circle').classList.remove('circle');
+}, 15500);
+ setTimeout(() => {
+  document.querySelector('.openning').classList.add('hidden');
+  container.style.justifyContent = 'baseline';
+}, 20500);
+
+setTimeout(() => {
+  document.querySelector('section.mine').classList.remove('hidden');
+}, 21500);
+setTimeout(() => {
+  document.querySelector('section.mine header').classList.remove('opac0');
+}, 22000);
+setTimeout(() => {
+  document.querySelector('section.mine .line').classList.remove('opac0');
+}, 22300);
+setTimeout(() => {
+  document.querySelector('section.mine .no-1').classList.remove('opac0');
+}, 22350);
+setTimeout(() => {
+  document.querySelector('section.mine .no-2').classList.remove('opac0');
+}, 22500);
+setTimeout(() => {
+  document.querySelector('section.mine .no-3').classList.remove('opac0');
+}, 22650);
 
