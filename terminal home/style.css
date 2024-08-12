@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'terminal';
+    src: url(fonts/VT323-Regular.ttf);
+}
+@font-face {
+    font-family: 'elegant';
+    src: url(fonts/Sprout-ThinCondensed.otf)
+    format('opentype');
+}
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=VT323&display=swap');
+
+body{
+    height: 97vh;
+    display: flex;
+    justify-content: baseline;
+
+    flex-direction: column;
+    align-items: baseline;
+    font-family: 'terminal';
+    background-color: black;
+}
+p{
+    font-size: 22px;
+    padding-left: 30px;
+
+    /* width: 250px; */
+    /* white-space: nowrap; */
+    color: rgb(54, 134, 44);
+}
+.container{
+  max-width: 600px;
+}
+div.image{
+    width: 99.5%;
+    height: 97vh;
+    background-image: url(6vjvil.webp) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 100%; */
+    position: absolute;
+}
+.hidden{
+    display: none;
+}
+p.welcome{
+
+    /* transform: translate(-50%,-50%); */
+    font-family: "elegant";
+    font-size: 70px;
+    color: white;
+    transition: all 2s ease-in-out;
+}
+.opac0{
+    opacity: 0;
+}
